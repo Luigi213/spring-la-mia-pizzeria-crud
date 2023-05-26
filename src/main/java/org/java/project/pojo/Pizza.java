@@ -56,12 +56,18 @@ public class Pizza {
 		this.price = price;
 	}
 	
+	public String formatPrice() {
+		double amount = getPrice();
+		String newPrice = String.format("%,.2f", amount) + "€";
+		return newPrice;
+	}
+	
 	@Override
 	public String toString() {
 		return "[" + getId() + "] " 
 				+ "name: " + getName()
 				+ " description: " + getDescription()
 				+ " urlPhoto: " + getUrlPhoto()
-				+ " price: " + getPrice();
+				+ " price: " + formatPrice();
 	}
 }

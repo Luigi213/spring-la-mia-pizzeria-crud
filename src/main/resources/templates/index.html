@@ -5,15 +5,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Pizze</h1>
+	<h1>Pizzas</h1>
 	<ul>
 		<li
 			th:each="pizza : ${pizzas}"
 			th:object="${pizza}"
 		>
-			[[ *{name} ]]
+			<a th:href="@{/pizza/{id} (id=*{id})}">
+				[[ *{name} ]]
+			</a>
 		</li>
 	</ul>
-	<h2 th:if="${pizzas.isEmpty()}">Non ci sono pizze</h2>
+	<h2 th:if="${pizzas.isEmpty()}">there are no pizzas</h2>
 </body>
 </html>
