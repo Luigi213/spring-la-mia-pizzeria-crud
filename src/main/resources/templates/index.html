@@ -6,6 +6,7 @@
 </head>
 <body>
 	<h1>Pizzas</h1>
+	<a th:href="@{/pizza/create}">Create pizza</a>
 	<form th:action="@{/pizza/by/name}" method="POST">
 		<input type="text" name="name">
 		<input type="submit" value="Search"> 
