@@ -25,4 +25,7 @@ public class ServicePizza {
 		
 		return repoPizza.findById(id);
 	}
+	public List<Pizza> findByName(String name){
+		return repoPizza.findByNameContaining(name);
+	}
 }
